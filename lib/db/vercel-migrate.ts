@@ -29,7 +29,10 @@ const runVercelMigrate = async () => {
     await connection.end();
     process.exit(0);
   } catch (err) {
-    console.log('⚠️ Database setup skipped due to error:', err.message);
+    console.log(
+      '⚠️ Database setup skipped due to error:',
+      err instanceof Error ? err.message : 'Unknown error',
+    );
     process.exit(0); // Don't fail the build
   }
 };

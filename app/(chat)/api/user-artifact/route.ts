@@ -6,7 +6,7 @@ export async function GET() {
   const session = await auth();
 
   if (!session?.user) {
-    return new ChatSDKError('unauthorized:user-artifact').toResponse();
+    return new ChatSDKError('unauthorized:document').toResponse();
   }
 
   try {
@@ -29,14 +29,8 @@ export async function GET() {
     return Response.json(transformedArtifact, { status: 200 });
   } catch (error) {
     return new ChatSDKError(
-      'bad_request:user-artifact',
+      'bad_request:document',
       'Failed to get user artifact',
     ).toResponse();
   }
 }
-
-
-
-
-
-
