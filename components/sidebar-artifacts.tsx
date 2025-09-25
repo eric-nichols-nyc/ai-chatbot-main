@@ -14,11 +14,6 @@ import {
   SidebarMenuButton,
 } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
 
 interface UserArtifact {
   id: string;
@@ -132,7 +127,7 @@ export function SidebarArtifacts({ user }: SidebarArtifactsProps) {
                 </span>
               </div>
               <p className="text-xs text-blue-700 dark:text-blue-300">
-                "{userArtifact.title}"
+                &ldquo;{userArtifact.title}&rdquo;
               </p>
               <div className="flex gap-1">
                 <Button

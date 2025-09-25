@@ -13,7 +13,6 @@ import {
   ConversationContent,
   ConversationScrollButton,
 } from './elements/conversation';
-import { cn } from '@/lib/utils';
 
 interface MessagesProps {
   chatId: string;
